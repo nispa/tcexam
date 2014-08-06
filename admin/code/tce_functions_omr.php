@@ -161,7 +161,7 @@ function F_decodeOMRPage($image) {
 	// resize image
 	$img->resizeImage(1028, 1052, Imagick::FILTER_CUBIC, 1);
 	$img->setImagePage(0, 0, 0, 0);
-	// binarize image
+	// binarize image with not automatic threshold
 	$color = '#c0c0c0';
 	$img->blackthresholdImage("$color");
 	$img->whitethresholdImage("$color");
